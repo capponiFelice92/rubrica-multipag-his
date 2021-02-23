@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "rubrica-multipag-his"
+  "defaultProject": "rubrica-multipag-his",
+  "cli": {
+    "analytics": false
+  }
 }

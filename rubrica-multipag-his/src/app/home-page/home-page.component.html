@@ -3,19 +3,11 @@
 <input type="text" placeholder="telefono">
 <br>
 <br>
-<button>Aggiungi</button>
-
-<a routerLink="/conteggio-contatti">
-    <button>Conta</button>
-</a>
-
-<a routerLink="/ricerca-page">
-    <button>Cerca</button>
-</a>
-
+<button (click)="aggiungi()">Aggiungi</button>
+<button (click)="conta()">Conta</button>
+<button (click)="cerca()">Cerca</button>
 <br>
 <br>
-
 <table>
     <tr>
         <th>Nome</th>
