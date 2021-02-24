@@ -1,11 +1,4 @@
-<input type="text" placeholder="nome">
-<input type="text" placeholder="cognome">
-<input type="text" placeholder="telefono">
-<br>
-<br>
-<button (click)="aggiungi()">Aggiungi</button>
-<button (click)="conta()">Conta</button>
-<button (click)="cerca()">Cerca</button>
+<app-form-panel [valInputNome] = "nomeToFormPanel" [valInputCognome] = "cognomeToFormPanel" [valInputTelefono] = "telefonoToFormPanel"  (contaEvent)="passaPaginaConta($event)" (cercaEvent)="passaPaginaRicerca($event)"></app-form-panel>
 <br>
 <br>
 <table>
@@ -24,3 +17,4 @@
         </td>
     </tr>
 </table>
+

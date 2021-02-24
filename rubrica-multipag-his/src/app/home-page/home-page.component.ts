@@ -8,18 +8,22 @@ import { Router } from '@angular/router';
 })
 export class HomePageComponent implements OnInit {
 
+  nomeToFormPanel="nome";
+  cognomeToFormPanel="cognome";
+  telefonoToFormPanel="telefono";
+
   constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  conta(){
-    this.router.navigateByUrl('/conteggio-contatti');
+  passaPaginaConta(s: string) {
+    this.router.navigateByUrl("/conteggio-contatti");
+    console.log(s);
   }
 
-  cerca(){
-    this.router.navigateByUrl('/ricerca-page');
+  passaPaginaRicerca(s: string) {
+    this.router.navigateByUrl("/ricerca-page");
+    console.log(s);
   }
-
-  aggiungi(){}
 }
