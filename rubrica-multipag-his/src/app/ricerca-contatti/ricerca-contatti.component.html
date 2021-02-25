@@ -1,9 +1,9 @@
-<input type="text" placeholder="Search criterio">
-<button>Cerca</button>
+<input type="text" placeholder="Search criterio" [(ngModel)]="criterioRicerca">
+<button (click)="cerca()">Cerca</button>
 <button (click)="mainPage()">Main page</button>
 <br>
 <br>
-<table>
+<table *ngIf="listaCompletaVis">
     <tr>
         <th>Nome</th>
         <th>Cognome</th>
@@ -14,6 +14,23 @@
         <td>{{p.nome}}</td>
         <td>{{p.cognome}}</td>
         <td>{{p.telefono}}</td>
+        <td>
+            <button>Cancella</button>
+        </td>
+    </tr>
+</table>
+
+<table *ngIf="listaFiltrataVis">
+    <tr>
+        <th>Nome</th>
+        <th>Cognome</th>
+        <th>Telefono</th>
+        <th></th>
+    </tr>
+    <tr *ngFor="let l of listaFiltrata">
+        <td>{{l.nome}}</td>
+        <td>{{l.cognome}}</td>
+        <td>{{l.telefono}}</td>
         <td>
             <button>Cancella</button>
         </td>
