@@ -28,7 +28,7 @@ export class RicercaContattiComponent implements OnInit {
     this.listaCompletaVis = false;
     this.listaFiltrataVis = true;
     this.listaFiltrata = this.med.lista;
-    this.listaFiltrata = this.listaFiltrata.filter(p=>p.nome == this.criterioRicerca || p.cognome == this.criterioRicerca || p.telefono == this.criterioRicerca);
+    this.listaFiltrata = this.listaFiltrata.filter(p=>p.nome.startsWith(this.criterioRicerca)  || p.cognome.startsWith(this.criterioRicerca) || p.telefono.startsWith(this.criterioRicerca) );
 
   }
 }
