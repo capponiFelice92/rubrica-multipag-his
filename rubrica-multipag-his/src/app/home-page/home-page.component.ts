@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ModeratorService } from '../moderator.service';
 
 @Component({
   selector: 'app-home-page',
@@ -12,7 +13,7 @@ export class HomePageComponent implements OnInit {
   cognomeToFormPanel="cognome";
   telefonoToFormPanel="telefono";
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, public med:ModeratorService) { }
 
   ngOnInit(): void {
   }

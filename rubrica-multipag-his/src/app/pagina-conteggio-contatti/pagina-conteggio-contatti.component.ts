@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ModeratorService } from '../moderator.service';
 
 @Component({
   selector: 'app-pagina-conteggio-contatti',
@@ -8,14 +9,12 @@ import { Router } from '@angular/router';
 })
 export class PaginaConteggioContattiComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, public med: ModeratorService) { }
 
   ngOnInit(): void {
   }
 
-  numeroContatti:number = 0;
-
-  tornaPaginaPrincipale(){
+  tornaPaginaPrincipale() {
     this.router.navigateByUrl('/home-page');
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ModeratorService } from '../moderator.service';
 
 @Component({
   selector: 'app-ricerca-contatti',
@@ -7,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./ricerca-contatti.component.css']
 })
 export class RicercaContattiComponent implements OnInit {
-  constructor(private router: Router) { }
+  constructor(private router: Router, public med:ModeratorService) { }
 
   ngOnInit(): void {
   }

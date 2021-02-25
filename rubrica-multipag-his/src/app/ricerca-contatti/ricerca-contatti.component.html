@@ -10,10 +10,10 @@
         <th>Telefono</th>
         <th></th>
     </tr>
-    <tr>
-        <td>xxxx</td>
-        <td>xxx</td>
-        <td>xxx</td>
+    <tr *ngFor="let p of med.lista">
+        <td>{{p.nome}}</td>
+        <td>{{p.cognome}}</td>
+        <td>{{p.telefono}}</td>
         <td>
             <button>Cancella</button>
         </td>

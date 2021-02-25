@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ModeratorService } from '../moderator.service';
+import { Persona } from '../persona';
 
 @Component({
   selector: 'app-form-panel',
@@ -15,8 +17,9 @@ export class FormPanelComponent implements OnInit {
   nome: string;
   cognome: string;
   telefono: string;
+  persona = new Persona();
 
-  constructor() { }
+  constructor(public med: ModeratorService) { }
 
   ngOnInit(): void {
     this.nome = this.valInputNome;
@@ -31,5 +34,8 @@ export class FormPanelComponent implements OnInit {
     this.cercaEvent.emit("sono cercaEvent e sono passato");
   }
 
-  aggiungi() { }
+  aggiungi() {
+    this.med.lista.push(this.persona);
+    this.persona = new Persona();
+  }
 }
